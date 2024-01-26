@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* ### Primary */
+
+--Pale-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(245, 75%, 52%);
+
+    /* ### Neutral */
+
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+}
+
+body{
+    display: grid;
+    place-items: center;
+    grid-template-rows: 100% 1fr;
+    font-family: 'Red Hat Display', sans-serif;
+    height: 100vh;
+    font-size: 16px;
+    background: hsl(225deg, 100%, 94%) url(images/pattern-background-desktop.svg) no-repeat top/contain;
+    background-size: 100vw 49.8vh;
+    overflow-y: hidden;
+}
+
+/* CONTAINER */
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 50px 5px;
+    height: 697px;
+}
+/* CONTAINER - IMG */
+.container .illustration{
+    border-radius: 1.25rem 1.25rem 0 0;
+}
+
+/* CONTENT-SUMMARY */
+.content-summary{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    height: 100%;
+    padding: 2.9rem 3rem;
+    border-radius: 0px 0px 1.25rem 1.25rem;
+}
+/* ORDER-SUMMARY */
+.content-summary .order-summary{
+    display: flex;
+    flex-direction: column;
+}
+/* ORDER-SUMMARY - H1 */
+.content-summary .order-summary h1{
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--Dark-blue);
+}
+/* ORDER-SUMMARY - P */
+.content-summary .order-summary p{
+    margin-top: 1.1rem;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+    font-size: 0.9825rem;
+    opacity: .9;
+    color: var(--Desaturated-blue);
+}
+/* CONTAINER-PLAN */
+.container-plan{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(225deg 100% 94% / 33%);
+    width: 100%;
+    margin-top: 1.3rem;
+    padding: 1.6rem 1.5rem;
+    border-radius: 0.625rem;
+}
+/* CONTENT-PLAN */
+.container-plan .content-plan{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+.content-plan .price-plan{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3125rem;
+}
+.content-plan .plan-text{
+    font-weight: 900;
+}
+.content-plan .price-text{
+    color: var(--Desaturated-blue);
+    font-weight: 500;
+    font-size: 1.04375rem;
+}
+/* CHANGE-PLAN */
+.change-plan a{
+    color: var(--Bright-blue);
+    font-size: 0.925rem;
+}
+/* PAYMENT */
+.payment{
+    width: 100%;
+}
+/* PAYMENT - BUTTOn */
+.payment-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    background-color: var(--Bright-blue);
+    color: var(--Very-pale-blue);
+    box-shadow: rgb(25 4 255 / 21%) 0px 20px 15px 0px;
+    width: 100%;
+    height: 50px;
+    margin-top: 1.9375rem;
+    font-weight: 700;
+    font-size: 0.9625rem;
+    border-radius: 0.625rem;
+}
+.cancel p{
+    margin-top: 2rem;
+    color: var(--Desaturated-blue);
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+/* Mediaqueries 390px */
+@media screen and (max-width: 391px) {
+    /* body */
+    body{
+        overflow-y: visible;
+    }
+    /* CONTAINER */
+    .container{
+        max-width: 327px;
+        height: 567px;
+    }
+    /* CONTENT-SUMMARY */
+    .content-summary{
+        padding: 2rem 1.56rem;
+    }
+    /* ORDER-SUMMARY - H1 */
+    .content-summary .order-summary h1{
+        font-size: 1.375rem;
+    }
+    /* ORDER-SUMMARY - P */
+    .content-summary .order-summary p{
+        font-size: 0.92rem;
+        padding: 0 0.875rem;
+    }
+    /* CONTAIENR - ILLUSTRATION */
+    .container .illustration{
+        width: 100%;
+    }
+    /* CONTAINER-PLAN */
+    .container-plan{
+        padding: 1rem;
+        margin-top: 1.7rem;
+    }
+    /* CONTENT-PLAN - PLANT-TEXT */
+    .content-plan .plan-text{
+        font-size: 0.875rem;
+    }
+    /* CONTENT-PLAN - PRICE-TEXT */
+    .content-plan .price-text{
+        font-size: 0.875rem;
+    }
+    .change-plan a {
+        font-size: 0.8rem;
+        font-weight: 800;
+    }
+    /* PAYMENT-BTN */
+    .payment-btn{
+        margin-top: 1.5rem;
+        font-size: 0.92rem;
+        letter-spacing: 0.6px;
+        font-weight: 700;
+    }
+    /* CANCEL */
+    .cancel p{
+        margin-top: 1.5rem;
+    }
+}
+
+.attribution{ 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a{ 
+    color: hsl(228, 45%, 44%); 
+}
